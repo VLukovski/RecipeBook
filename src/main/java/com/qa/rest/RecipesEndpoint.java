@@ -26,14 +26,14 @@ public class RecipesEndpoint {
 		return service.getAllRecipes();
 	}
 	
-	@Path("/cycleRecipes/{title}")
+	@Path("/cycleRecipes/{recipe}")
 	@GET
 	@Produces({ "application/json" })
-	public int cycleRecipes(@PathParam("title") String title) {
-		return service.cycleRecipes(title);
+	public int cycleRecipes(@PathParam("recipe") String recipe) {
+		return service.cycleRecipes(recipe);
 	}
 	
-	@Path("/getARecipes/{id}")
+	@Path("/getARecipe/{id}")
 	@GET
 	@Produces({ "application/json" })
 	public String getARecipe(@PathParam("id") Long id) {

@@ -15,5 +15,5 @@ public interface RecipeRepository {
 	// D
 	String deleteRecipe(Long id);
 
-	int cycleRecipes(String recipe_name);
+	int cycleRecipes(String recipeName);
 }

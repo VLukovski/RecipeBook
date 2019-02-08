@@ -5,31 +5,32 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+
 @Entity
 public class Recipe {
 	public Recipe() {
 	}
 
-	public Recipe(String recipeName, String owner, String description) {
+	public Recipe(String recipeName, String description) {
 		this.recipeName = recipeName;
-		this.owner = owner;
 		this.description = description;
 	}
 
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Id
-	private Long id;
+	private Long recipeId;
 	
 	private String recipeName;
-	private String owner;
 	private String description;
-
+	private Long ownerId;
+	
+	
 	public Long getId() {
-		return id;
+		return recipeId;
 	}
 
-	public void setId(Long id) {
-		this.id = id;
+	public void setId(Long recipeId) {
+		this.recipeId = recipeId;
 	}
 
 	public String getRecipeName() {
@@ -40,12 +41,12 @@ public class Recipe {
 		this.recipeName = recipeName;
 	}
 
-	public String getOwner() {
-		return owner;
+	public Long getOwnerId() {
+		return ownerId;
 	}
 
-	public void setOwner(String owner) {
-		this.owner = owner;
+	public void setOwner(Long ownerId) {
+		this.ownerId = ownerId;
 	}
 
 	public String getDescription() {

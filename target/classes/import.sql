@@ -1,4 +1,7 @@
-INSERT INTO RECIPE (id, recipeName, owner, description) VALUES (1, 'Chicken Tikka Sub', 'Val', 'Bread, Chicken Tikka, Salad, Any Sauce')
-INSERT INTO RECIPE (id, recipeName, owner, description) VALUES (2, 'Duck l//'eorange', 'Bill','ducks and orange')
-INSERT INTO RECIPE (id, recipeName, owner, description) VALUES (3, 'Homemade chicken korma', 'Tony','chicken, korma powder, coconut milk, rice, onions')
-INSERT INTO RECIPE (id, recipeName, owner, description) VALUES (4, 'Stir fry rice', 'Mary','Chicken, seasoning, rice, vegetable, egg')
+INSERT INTO OWNER (ownerId, firstName, lastName) VALUES (DEFAULT, 'John', 'John')
+INSERT INTO OWNER (ownerId, firstName, lastName) VALUES (DEFAULT, 'Joe', 'Simmons')
+
+INSERT INTO RECIPE (recipeId, recipeName, ownerId, description) VALUES (DEFAULT, 'Chicken Tikka Sub', 1, 'Bread, Chicken Tikka, Salad, Any Sauce')
+INSERT INTO RECIPE (recipeId, recipeName, ownerId, description) VALUES (DEFAULT, 'Duck l''eorange', 1,'ducks and orange')
+INSERT INTO RECIPE (recipeId, recipeName, ownerId, description) VALUES (DEFAULT, 'Homemade chicken korma', 2,'chicken, korma powder, coconut milk, rice, onions')
+INSERT INTO RECIPE (recipeId, recipeName, ownerId, description) VALUES (DEFAULT, 'Stir fry rice', 2,'Chicken, seasoning, rice, vegetable, egg')

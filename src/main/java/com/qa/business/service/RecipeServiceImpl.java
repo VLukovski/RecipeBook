@@ -9,9 +9,6 @@ public class RecipeServiceImpl implements RecipeService {
 	@Inject
 	private RecipeRepository repo;
 
-	public String getAllMovies() {
-		return repo.getAllRecipes();
-	}
 
 	@Override
 	public String addRecipe(String recipe) {
